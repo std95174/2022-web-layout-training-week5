@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%- title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./assets/style/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body class="d-flex">
+<nav class="nav bg-gray-100 d-flex flex-column justify-content-between align-items-start pb-6">
+    <div class="w-100">
+        <img src="assets/images/logo-ANSWER.svg" alt="logo" class="nav-img mb-6 pl-6">
+        <ul class="nav-links fw-bold text-dark">
+            <li class="align-top nav-item">
+                <a href="#" class="pl-6 nav-link">
+                    <span class="material-icons me-3 align-top">assessment</span>
+                    Dashboard
+                </a>
+            </li>
+            <li class="align-top">
+                <a href="#" class="pl-6">
+                    <span class="material-icons me-3 align-top">question_answer</span>
+                    Question
+                </a>
+            </li>
+            <li class="align-top text-success nav-active">
+                <a href="index.html" class="pl-6">
+                    <span class="material-icons me-3 align-top">assignment</span>
+                    Assignment
+                </a>
+            </li>
+            <li class="align-top">
+                <a href="#" class="pl-6">
+                    <span class="material-icons me-3 align-top">video_library</span>
+                    Course
+                </a>
+            </li>
+            <li class="align-top">
+                <a href="admin.html" class="pl-6">
+                    <span class="material-icons me-3 align-top">supervisor_account</span>
+                    Admin
+                </a>
+            </li>
+            <li class="align-top">
+                <a href="#" class="pl-6">
+                    <span class="material-icons me-3 align-top">settings</span>
+                    Settings
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="user-info d-flex align-items-center pl-6">
+        <img src="./assets/images/andychen.jpeg" alt="andy" class="personal-icon rounded-circle me-3">
+        <ul class="d-flex flex-column">
+            <li class="fw-bold">Andy Chen</li>
+            <li class="text-gray-600">andy0401@mail.com</li>
+        </ul>
+    </div>
+</nav>
+
+<!--<header class="container">-->
+<!--    -->
+<!--</header>-->
+
+<main class="container-fluid">
+    <header class="d-flex align-items-center pt-6 pb-6">
+        <h1 class="fw-bold fs-4 mb-0"><%- title %></h1>
+
+        <div class="dropdown">
+            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="fw-bold">All Courses</span>
+                <span class="material-icons align-top">expand_more</span>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Course A</a></li>
+                <li><a class="dropdown-item" href="#">Course B</a></li>
+                <li><a class="dropdown-item" href="#">Course C</a></li>
+            </ul>
+        </div>
+
+        <div class="ms-auto">
+            <span class="material-icons align-top me-4">search</span>
+            <span class="material-icons align-top">notifications_active</span>
+        </div>
+    </header>
+    <%- contents %>
+</main>
+
+<script src="./assets/js/vendors.js"></script>
+<script src="./assets/js/all.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+    $(".navbar li").click(function (e) {
+        e.preventDefault();
+        $(".navbar li").removeClass("nav-active text-success");
+        $(this).toggleClass("nav-active text-success");
+    });
+</script>
+</body>
+
+</html>
